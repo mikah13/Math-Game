@@ -1,0 +1,77 @@
+@media screen and (min-width:768px) {
+    body {
+        background: url("background.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        padding-top: 5%;
+    }
+    .form-signin {
+        margin-top: 5vh;
+    }
+    #title {
+        font-size: 10vw;
+    }
+}
+
+@media screen and (max-width:767px) {
+    body {
+        padding-top: 30px;
+        background-color: rgba(246, 208, 189, 0.7);
+    }
+    .form-signin {
+        margin-top: 3vh;
+    }
+    #title {
+        font-size: 15vw;
+    }
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+#title {
+    font-weight: bold;
+    text-align: center;
+    color: rgb(67, 93, 230);
+    font-family: 'VT323', monospace;
+    letter-spacing: 4px;
+}
+
+input {
+    margin-bottom: 15px;
+}
+
+button {
+    margin-top: 15px;
+}
+
+.form-signin .form-control {
+    height: 50px;
+    font-size: 20px;
+}
+
+.error-message, .correct-message {
+    font-size: 22px;
+    text-align: center;
+    color: red;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.correct-message {
+    color: green;
+}
+
+#question {
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+#score {
+    margin-top: 10%;
+    text-align: center;
+    font-weight: bold;
+}
