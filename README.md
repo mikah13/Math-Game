@@ -15,4 +15,4 @@ These passwords were stored in the credential.config and extracted using PHP. Fo
 
 
 ## Usage:
-The game can be play at: http://mikah-math-game.azurewebsites.net/
+The game can be play at: http://mikah-mathgame.azurewebsites.net
