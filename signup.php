@@ -43,6 +43,10 @@ echo '<div class="container">
 echo $_GET["msg"];
 echo '</p>
       </form>
+      </div><div class="container">
+          <form class="form-signin" action="login.php" method="post">
+          <button class="btn btn-lg btn-success btn-block" id="logout" type="submit">Back to Login</button>
+          </form>
       </div>';
 echo '
     </body>
