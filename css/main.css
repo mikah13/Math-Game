@@ -52,7 +52,7 @@ button {
     font-size: 20px;
 }
 
-.error-message, .correct-message {
+.error-message, .correct-message, .success-message {
     font-size: 22px;
     text-align: center;
     color: red;
@@ -60,7 +60,7 @@ button {
     font-weight: bold;
 }
 
-.correct-message {
+.correct-message, .success-message {
     color: green;
 }
 

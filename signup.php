@@ -30,29 +30,22 @@ echo '<!DOCTYPE html>
 <h1 id="title">The Math Game</h1>
 ';
 echo '<div class="container">
-    <form class="form-signin" action="authenticate.php" method="post" autocomplete="off">
-    <h3 class="form-signin-heading">Please Login</h3>
+    <form class="form-signin" action="create_account.php" method="post" autocomplete="off">
+    <h3 class="form-signin-heading">Register Here</h3>
     <label for="inputEmail" class="sr-only">Email address</label>
-    <input  id="inputEmail" class="form-control" placeholder="Email address"  name="email">
+    <input  id="inputEmail" class="form-control" placeholder="Email address"  name="signup_email">
     <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password"  name="password">
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password"  name="signup_password">
     <div class="checkbox">
     </div>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
     <p class="error-message">';
 echo $_GET["msg"];
 echo '</p>
-<p class="success-message">
-'.$_GET["success"].'
-</p>
       </form>
-      </div>
-      <div class="container">
-          <form class="form-signin" action="signup.php" method="post">
-          <button class="btn btn-lg btn-warning btn-block" id="logout" type="submit">Sign Up</button>
-          </form>
       </div>';
 echo '
     </body>
 </html>
 ';
+?>

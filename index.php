@@ -15,10 +15,10 @@ echo '<!DOCTYPE html>
     <title>Math Game</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="http://v4-alpha.getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
+    <link href="https://v4-alpha.getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
 
     <!-- Custom stylesheet-->
     <link href="css/main.css" rel="stylesheet" />
@@ -32,13 +32,8 @@ echo '<!DOCTYPE html>
 <h1 id="title">The Math Game</h1>
 ';
 $login_page = "Location:login.php";
-
-if (!(strcmp($_SESSION["email"], $_SESSION["account1"][0]) === 0 && strcmp($_SESSION["password"], $_SESSION["account1"][1]) === - 1) && !(strcmp($_SESSION["email"], $_SESSION["account2"][0]) === 0 && strcmp($_SESSION["password"], $_SESSION["account2"][1]) === - 2)) {
-	header($login_page);
-}
-else
 if (!isset($_SESSION["email"]) || !isset($_SESSION["password"])) {
-	header($login_page);
+    header($login_page);
 }
 
 $total = isset($_POST["total"]) ? (int)$_POST["total"] : 0;
@@ -48,43 +43,39 @@ $first_number = rand(0, 50);
 $second_number = rand(0, 50);
 $rand_operation = rand(0, 2);
 $array = array(
-	"+",
-	"-",
-	"*"
+    "+",
+    "-",
+    "*"
 );
 $math_operation = $array[$rand_operation];
 
 function calculate($first, $second, $operator)
 {
-	if ($operator === "+") {
-		return $first + $second;
-	}
-	elseif ($operator === "-") {
-		return $first - $second;
-	}
-	else {
-		return $first * $second;
-	}
+    if ($operator === "+") {
+        return $first + $second;
+    } elseif ($operator === "-") {
+        return $first - $second;
+    } else {
+        return $first * $second;
+    }
 }
 
 $last_result = calculate($_POST["first_number"], $_POST["second_number"], $_POST["math_operation"]);
 
 if (isset($answer) && is_numeric($answer)) {
-	if ((int)$answer !== (int)$last_result) {
-		$message = "INCORRECT, " . $_POST["first_number"] . " " . $_POST["math_operation"] . " " . $_POST["second_number"] . " = " . $last_result . "<br";
-		$correct = " ";
-	}
-	else {
-		$message = " ";
-		$correct = "Correct!";
-		$score++;
-	}
+    if ((int)$answer !== (int)$last_result) {
+        $message = "INCORRECT, " . $_POST["first_number"] . " " . $_POST["math_operation"] . " " . $_POST["second_number"] . " = " . $last_result . "<br";
+        $correct = " ";
+    } else {
+        $message = " ";
+        $correct = "Correct!";
+        $score++;
+    }
 
-	$total++;
-}
-elseif (isset($answer) && (empty($answer) || !is_numeric($answer))) {
-	$message = "You must enter a number for your answer";
-	$correct = " ";
+    $total++;
+} elseif (isset($answer) && (empty($answer) || !is_numeric($answer))) {
+    $message = "You must enter a number for your answer";
+    $correct = " ";
 }
 
 echo '<div class="container">
@@ -110,4 +101,3 @@ echo '<div class="container">
     </div>
 </body>
 </html>';
-?>
