@@ -16,6 +16,8 @@ The game can be play at: http://mikah-mathgame.azurewebsites.net
   
 ## Future Features:
 
+* Allow users to change the password
+
 * Store users' information in a database
 
 * Add more option to choose the math operator (range of random numbers, more operators)
