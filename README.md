@@ -16,3 +16,11 @@ These passwords were stored in the credential.config and extracted using PHP. Fo
 
 ## Usage:
 The game can be play at: http://mikah-mathgame.azurewebsites.net
+
+
+## Future Features:
+* Add Sign Up feature for new user
+
+* Store users' information in a database
+
+* Add more option to choose the math operator (range of random numbers, more operators)
