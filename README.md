@@ -4,7 +4,7 @@ A Math Game that asks player to do addition, substraction and multiplication for
 
 
 ## Usage:
-The game can be play at: http://mikah-mathgame.azurewebsites.net
+The game can be played at: http://mikah-mathgame.azurewebsites.net
 
 
 ## NEW FEATURES:
