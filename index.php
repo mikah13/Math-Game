@@ -35,6 +35,9 @@ $login_page = "Location:login.php";
 if (!isset($_SESSION["email"]) || !isset($_SESSION["password"])) {
     header($login_page);
 }
+else if(empty($_SESSION["email"]) || empty($_SESSION["password"])) {
+    header($login_page);
+}
 
 $total = isset($_POST["total"]) ? (int)$_POST["total"] : 0;
 $score = isset($_POST["score"]) ? (int)$_POST["score"] : 0;

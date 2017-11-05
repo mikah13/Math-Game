@@ -5,7 +5,7 @@ $_SESSION["email"] = trim(htmlspecialchars($_POST["email"]));
 $_SESSION["password"] = trim(htmlspecialchars($_POST["password"]));
 $login_page = "Location:login.php?msg=";
 $index_page = "Location:index.php";
-$msg = "Invalid login credentials.";
+// $msg = "Invalid login credentials.";
 
 $_SESSION["email_array"]= array();
 $_SESSION["password_array"]= array();
@@ -20,7 +20,8 @@ if ($file = fopen("credentials.config", "r")) {
 $index = array_search($_SESSION["email"], $_SESSION["email_array"]);
     if (is_numeric($index) && strcmp($_SESSION["email"], $_SESSION["email_array"][$index])==0 && strcmp($_SESSION["password"], $_SESSION["password_array"][$index])==0) {
         header($index_page);
-    } else {
+    }
+    else {
         unset($_SESSION["email"]);
         unset($_SESSION["password"]);
         header($login_page . $msg);
